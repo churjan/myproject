@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   base: process.env.BASE_URL,
-  mode: 'history',
+  mode: 'hash',
   routes,
   scrollBehavior() {
     return { x: 0, y: 0 };
