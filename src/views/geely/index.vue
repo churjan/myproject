@@ -5,9 +5,9 @@
         <div class="cover-view">
           <div
             class="cover"
-            :style="`background-image:url(${
-              publicPath + imgPath + item.pcImg
-            })`"
+            :style="`background-image:url(${require('@/assets/images/screenshot' +
+              imgPath +
+              item.pcImg)})`"
           ></div>
           <div class="mask-view">
             <div class="enter-btn">进入项目</div>
@@ -23,7 +23,9 @@
         <div class="cover-view">
           <div
             class="cover"
-            :style="`background-image:url(${publicPath + imgPath + item.mImg})`"
+            :style="`background-image:url(${require('@/assets/images/screenshot' +
+              imgPath +
+              item.mImg)})`"
           ></div>
           <div class="mask-view">
             <div class="enter-btn">进入项目</div>
@@ -36,7 +38,7 @@
       :title="title"
       :visible.sync="visible"
       width="350px"
-      :before-close="handleClose"
+      :before-close="onClose"
     >
       <div class="flex-view">
         <qriously :value="url" :size="200" />
@@ -46,34 +48,13 @@
 </template>
 
 <script>
+import { imgPath, list } from '@/configs/geely.json';
+console.log(imgPath, list);
 export default {
   data() {
     return {
-      list: [
-        {
-          title: '吉利官方商城',
-          pcImg: 'mall_pc.png',
-          pcUrl: 'https://mall.geely.com',
-          mImg: 'mall_m.jpeg',
-          mUrl: 'https://mall.geely.com',
-        },
-        {
-          title: '星越L盲订',
-          mImg: 'xingyue-l_m.jpeg',
-          mUrl: 'https://mall.geely.com/landing/xingyue-l/',
-        },
-        {
-          title: '吉利品牌',
-          mImg: 'geely-brand_m.jpeg',
-          mUrl: 'https://mall.geely.com/landing/geely-brand/',
-        },
-        {
-          title: '预定豪越享大礼',
-          mImg: 'haoyuezhibo_m.jpeg',
-          mUrl: 'https://mall.geely.com/landing/haoyuezhibo/',
-        },
-      ],
-      imgPath: 'screenshot/geely/',
+      imgPath,
+      list,
       title: '',
       url: '',
       visible: false,
@@ -88,7 +69,7 @@ export default {
       this.title = title;
       this.url = url;
     },
-    handleClose() {
+    onClose() {
       this.visible = false;
     },
   },

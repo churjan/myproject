@@ -38,8 +38,7 @@ export default {
   watch: {
     $route: {
       handler() {
-        const str = this.$route.path;
-        this.activeItem = str.match(/\w+$/)[0];
+        this.activeItem = this.$route.path.match(/\w+$/g)[0];
       },
       immediate: true,
     },

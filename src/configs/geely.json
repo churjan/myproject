@@ -1,0 +1,27 @@
+{
+  "imgPath": "/geely/",
+  "list": [
+    {
+      "title": "吉利官方商城",
+      "pcImg": "mall_pc.png",
+      "pcUrl": "https://mall.geely.com",
+      "mImg": "mall_m.jpeg",
+      "mUrl": "https://mall.geely.com"
+    },
+    {
+      "title": "星越L盲订",
+      "mImg": "xingyue-l_m.jpeg",
+      "mUrl": "https://mall.geely.com/landing/xingyue-l/"
+    },
+    {
+      "title": "吉利品牌",
+      "mImg": "geely-brand_m.jpeg",
+      "mUrl": "https://mall.geely.com/landing/geely-brand/"
+    },
+    {
+      "title": "预定豪越享大礼",
+      "mImg": "haoyuezhibo_m.jpeg",
+      "mUrl": "https://mall.geely.com/landing/haoyuezhibo/"
+    }
+  ]
+}
